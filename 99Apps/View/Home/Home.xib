@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Home" customModule="_9Apps" customModuleProvider="target">
             <connections>
                 <outlet property="tableView" destination="aCQ-b7-ys4" id="I9I-Az-cIb"/>
+                <outlet property="view" destination="iN0-l3-epB" id="sD7-6Z-KyB"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

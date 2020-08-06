@@ -18,6 +18,8 @@ class Home: UIViewController {
         return searchBar
     }()
     
+    let propertyListCell = "PropertyListCell"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,11 +30,12 @@ class Home: UIViewController {
     private func setDelegate() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(UINib(nibName: propertyListCell, bundle: nil), forCellReuseIdentifier: propertyListCell)
     }
     
     private func setNavbar() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: searchBar)
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(mapBtn(_:)))
+        navigationItem.titleView = searchBar
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(mapBtn(_:)))
     }
     
     @objc
@@ -48,10 +51,13 @@ extension Home: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "", for: indexPath)
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: propertyListCell, for: indexPath) as! PropertyListCell
+        cell.selectionStyle = .none
+        cell.titleProperty.text = "fdasfdfdsfasdf"
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 320
+    }
 }
