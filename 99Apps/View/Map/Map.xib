@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Map" customModule="_9Apps" customModuleProvider="target">
+            <connections>
+                <outlet property="detailsView" destination="eKz-vO-1j7" id="YN9-hY-sbC"/>
+                <outlet property="mapView" destination="Svf-vx-qF1" id="OOj-H1-Tj2"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Svf-vx-qF1">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </mapView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eKz-vO-1j7">
+                    <rect key="frame" x="20" y="708" width="374" height="134"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rumah" translatesAutoresizingMaskIntoConstraints="NO" id="1Zn-Q5-YOs">
+                            <rect key="frame" x="8" y="8" width="120" height="120"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="120" id="ArB-jm-toR"/>
+                                <constraint firstAttribute="width" secondItem="1Zn-Q5-YOs" secondAttribute="height" multiplier="34:49" constant="36.734693877551024" id="Btc-X7-v3d"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rp. 900 Juta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUG-Qf-eDR">
+                            <rect key="frame" x="136" y="8" width="190" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rumah dijual di Bandung" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l32-7o-aok">
+                            <rect key="frame" x="136" y="71" width="230" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Fgl-2n-O3c">
+                            <rect key="frame" x="136" y="92.5" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="NGd-eD-h17"/>
+                                <constraint firstAttribute="width" constant="35" id="vOG-xb-z9k"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jalan Sukajadi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saD-4c-3nn">
+                            <rect key="frame" x="184" y="100" width="182" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.61571902040000004" green="0.61560308929999996" blue="0.61960881950000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Spc-Pz-3KP">
+                            <rect key="frame" x="336" y="8" width="30" height="33"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="9vP-uh-kKA"/>
+                                <constraint firstAttribute="height" constant="33" id="Xul-Wg-9uQ"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstItem="Fgl-2n-O3c" firstAttribute="top" secondItem="l32-7o-aok" secondAttribute="bottom" id="4zZ-RN-la5"/>
+                        <constraint firstAttribute="trailing" secondItem="Spc-Pz-3KP" secondAttribute="trailing" constant="8" id="CWD-0x-mbF"/>
+                        <constraint firstItem="1Zn-Q5-YOs" firstAttribute="top" secondItem="eKz-vO-1j7" secondAttribute="top" constant="8" id="GyC-U7-hdh"/>
+                        <constraint firstItem="saD-4c-3nn" firstAttribute="leading" secondItem="Fgl-2n-O3c" secondAttribute="trailing" constant="13" id="JT2-bj-geT"/>
+                        <constraint firstItem="1Zn-Q5-YOs" firstAttribute="leading" secondItem="eKz-vO-1j7" secondAttribute="leading" constant="8" id="JvL-hM-bMq"/>
+                        <constraint firstItem="saD-4c-3nn" firstAttribute="top" secondItem="l32-7o-aok" secondAttribute="bottom" constant="8" id="KTf-bF-6Ic"/>
+                        <constraint firstItem="l32-7o-aok" firstAttribute="top" secondItem="jUG-Qf-eDR" secondAttribute="bottom" constant="42" id="VN0-io-0ie"/>
+                        <constraint firstAttribute="height" constant="134" id="aiu-y6-xn7"/>
+                        <constraint firstItem="l32-7o-aok" firstAttribute="leading" secondItem="1Zn-Q5-YOs" secondAttribute="trailing" constant="8" id="dZi-21-sXy"/>
+                        <constraint firstItem="jUG-Qf-eDR" firstAttribute="leading" secondItem="1Zn-Q5-YOs" secondAttribute="trailing" constant="8" id="eI3-7E-Mzp"/>
+                        <constraint firstItem="Spc-Pz-3KP" firstAttribute="leading" secondItem="jUG-Qf-eDR" secondAttribute="trailing" constant="10" id="lUB-OY-DAm"/>
+                        <constraint firstAttribute="trailing" secondItem="l32-7o-aok" secondAttribute="trailing" constant="8" id="nxP-Ro-Y5e"/>
+                        <constraint firstAttribute="trailing" secondItem="saD-4c-3nn" secondAttribute="trailing" constant="8" id="pqn-EK-M9h"/>
+                        <constraint firstItem="Spc-Pz-3KP" firstAttribute="top" secondItem="eKz-vO-1j7" secondAttribute="top" constant="8" id="uo8-nc-NfH"/>
+                        <constraint firstItem="jUG-Qf-eDR" firstAttribute="top" secondItem="eKz-vO-1j7" secondAttribute="top" constant="8" id="vbJ-4R-xPC"/>
+                        <constraint firstItem="Fgl-2n-O3c" firstAttribute="leading" secondItem="1Zn-Q5-YOs" secondAttribute="trailing" constant="8" id="vpj-xz-w8M"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="mjS-cs-9QP" appends="YES" id="18C-cL-CBF"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Svf-vx-qF1" secondAttribute="trailing" id="8lu-ZJ-u7T"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="eKz-vO-1j7" secondAttribute="bottom" constant="20" id="LTB-2U-q2N"/>
+                <constraint firstItem="Svf-vx-qF1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ccS-05-BN6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eKz-vO-1j7" secondAttribute="trailing" constant="20" id="f4j-tP-uug"/>
+                <constraint firstItem="eKz-vO-1j7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="feO-dO-loV"/>
+                <constraint firstAttribute="bottom" secondItem="Svf-vx-qF1" secondAttribute="bottom" id="jle-Cn-ufv"/>
+                <constraint firstItem="Svf-vx-qF1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="q54-bI-P5t"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="124.55357142857142"/>
+        </view>
+        <tapGestureRecognizer id="mjS-cs-9QP">
+            <connections>
+                <action selector="infoDetailsTap:" destination="-1" id="Jdb-Ef-EmZ"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="bookmark" catalog="system" width="112" height="128"/>
+        <image name="location.circle" catalog="system" width="128" height="121"/>
+        <image name="rumah" width="620" height="412"/>
+    </resources>
+</document>
