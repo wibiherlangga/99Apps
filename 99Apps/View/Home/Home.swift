@@ -75,7 +75,7 @@ class Home: UIViewController {
 extension Home: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.propertyData?.data.list.count ?? 1
+        return viewModel.propertyData?.data.list.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -91,6 +91,7 @@ extension Home: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = Details()
+        vc.details = viewModel.propertyData?.data.list[indexPath.row]
         navigationController?.isNavigationBarHidden = true
         navigationController?.pushViewController(vc, animated: true)
     }

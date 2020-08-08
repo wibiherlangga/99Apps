@@ -9,6 +9,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Details" customModule="_9Apps" customModuleProvider="target">
             <connections>
+                <outlet property="agentName" destination="9at-r6-0b7" id="Knz-pE-uuc"/>
+                <outlet property="agentPosition" destination="ijW-Mf-Abo" id="pc5-80-Ogh"/>
+                <outlet property="propertyDescription" destination="piD-VB-GY1" id="I1B-EN-ppb"/>
+                <outlet property="propertyFacilites" destination="Hvs-T5-t9N" id="q9L-B0-z73"/>
+                <outlet property="propertyLocation" destination="X1X-8c-DS9" id="2sE-Ei-07S"/>
+                <outlet property="propertyPrice" destination="RuQ-N8-1LY" id="K5b-ve-Db8"/>
+                <outlet property="propertyTitle" destination="hPM-t2-NnW" id="BSj-4Z-kly"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
