@@ -13,6 +13,7 @@
                 <outlet property="agentPosition" destination="ijW-Mf-Abo" id="pc5-80-Ogh"/>
                 <outlet property="propertyDescription" destination="piD-VB-GY1" id="I1B-EN-ppb"/>
                 <outlet property="propertyFacilites" destination="Hvs-T5-t9N" id="q9L-B0-z73"/>
+                <outlet property="propertyImg" destination="UD4-Ua-SLf" id="z7M-uy-3yX"/>
                 <outlet property="propertyLocation" destination="X1X-8c-DS9" id="2sE-Ei-07S"/>
                 <outlet property="propertyPrice" destination="RuQ-N8-1LY" id="K5b-ve-Db8"/>
                 <outlet property="propertyTitle" destination="hPM-t2-NnW" id="BSj-4Z-kly"/>
@@ -30,7 +31,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BHf-Df-cut" userLabel="View BG">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rumah" translatesAutoresizingMaskIntoConstraints="NO" id="UD4-Ua-SLf">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UD4-Ua-SLf">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="UD4-Ua-SLf" secondAttribute="height" multiplier="1:1" id="1Mb-2o-gIu"/>
@@ -43,7 +44,7 @@
                                     <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rumah dijual di Bandung" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPM-t2-NnW">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rumah dijual di Bandung" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPM-t2-NnW">
                                     <rect key="frame" x="10" y="463.5" width="393" height="31.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                     <nil key="textColor"/>
@@ -159,6 +160,9 @@
                                                 <constraint firstAttribute="width" constant="32" id="S8H-dE-QCo"/>
                                             </constraints>
                                             <state key="normal" image="arrowshape.turn.up.right" catalog="system"/>
+                                            <connections>
+                                                <action selector="shareBtn:" destination="-1" eventType="touchUpInside" id="NSD-3u-AfE"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Os6-Ap-tEX">
                                             <rect key="frame" x="8" y="75" width="32" height="34"/>
@@ -182,6 +186,9 @@
                                                     <integer key="value" value="5"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="contactCall:" destination="-1" eventType="touchUpInside" id="Qt0-aD-WX8"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -224,6 +231,7 @@
                                 <constraint firstItem="DMu-pJ-hNX" firstAttribute="leading" secondItem="BHf-Df-cut" secondAttribute="leading" constant="10" id="WfX-CV-uYY"/>
                                 <constraint firstItem="23k-2m-gNM" firstAttribute="leading" secondItem="BHf-Df-cut" secondAttribute="leading" constant="8" id="YLz-qz-pCd"/>
                                 <constraint firstItem="hPM-t2-NnW" firstAttribute="top" secondItem="RuQ-N8-1LY" secondAttribute="bottom" constant="12" id="ZTG-pJ-XgI"/>
+                                <constraint firstAttribute="height" constant="896" id="bGU-6N-dM2"/>
                                 <constraint firstAttribute="trailing" secondItem="X1X-8c-DS9" secondAttribute="trailing" constant="8" id="coU-6J-3Em"/>
                                 <constraint firstItem="oTv-Zq-hPB" firstAttribute="leading" secondItem="BHf-Df-cut" secondAttribute="leading" constant="11" id="lqU-jK-bpn"/>
                                 <constraint firstItem="23k-2m-gNM" firstAttribute="top" secondItem="DMu-pJ-hNX" secondAttribute="bottom" constant="30" id="poQ-VE-vkH"/>
@@ -240,13 +248,11 @@
                     <constraints>
                         <constraint firstItem="BHf-Df-cut" firstAttribute="leading" secondItem="AvR-gd-EXC" secondAttribute="leading" id="FCS-3A-onk"/>
                         <constraint firstItem="BHf-Df-cut" firstAttribute="width" secondItem="AvR-gd-EXC" secondAttribute="width" id="l9T-4m-ru7"/>
-                        <constraint firstItem="BHf-Df-cut" firstAttribute="height" secondItem="AvR-gd-EXC" secondAttribute="height" id="m6B-eA-ZJW"/>
+                        <constraint firstItem="BHf-Df-cut" firstAttribute="height" secondItem="AvR-gd-EXC" secondAttribute="height" priority="250" id="m6B-eA-ZJW"/>
                         <constraint firstAttribute="trailing" secondItem="BHf-Df-cut" secondAttribute="trailing" id="oNV-bY-bgd"/>
                         <constraint firstItem="BHf-Df-cut" firstAttribute="top" secondItem="AvR-gd-EXC" secondAttribute="top" id="rEg-sG-1Vz"/>
                         <constraint firstAttribute="bottom" secondItem="BHf-Df-cut" secondAttribute="bottom" id="svY-W1-JXu"/>
                     </constraints>
-                    <viewLayoutGuide key="contentLayoutGuide" id="UxO-Dl-3cq"/>
-                    <viewLayoutGuide key="frameLayoutGuide" id="4nj-5i-9Ip"/>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -266,6 +272,5 @@
         <image name="bookmark" catalog="system" width="112" height="128"/>
         <image name="location.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person" catalog="system" width="128" height="117"/>
-        <image name="rumah" width="620" height="412"/>
     </resources>
 </document>

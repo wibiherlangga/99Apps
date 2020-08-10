@@ -62,6 +62,9 @@
                                 <integer key="value" value="5"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="callContact:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="9rY-o1-SeN"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfg-M3-jl1">
                         <rect key="frame" x="290.5" y="176" width="20.5" height="24"/>

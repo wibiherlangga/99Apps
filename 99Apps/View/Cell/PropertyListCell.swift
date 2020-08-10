@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PropertyListCell: UITableViewCell {
     
@@ -28,9 +29,28 @@ class PropertyListCell: UITableViewCell {
     }
     
     func configureData(_ data: List?) {
+        let source = DataImg(url: URL(string: data?.image ?? "")!, cacheKey: "")
+        self.imgProperty.kf.setImage(with: source)
         self.priceProperty.text = data?.attribute.price
         self.titleProperty.text = data?.title
         self.locationProperty.text = data?.location.address
     }
     
+    @IBAction func callContact(_ sender: UIButton) {
+        Utilities.call()
+    }
+    
+}
+
+class DataImg: Resource {
+    
+    
+    public var cacheKey: String
+    
+    public var downloadURL: URL
+    
+    init(url: URL, cacheKey: String) {
+        self.downloadURL = url
+        self.cacheKey = cacheKey
+    }
 }

@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import Kingfisher
 
 class Details: UIViewController {
     
+    @IBOutlet weak var propertyImg: UIImageView!
     @IBOutlet weak var propertyPrice: UILabel!
     @IBOutlet weak var propertyTitle: UILabel!
     @IBOutlet weak var propertyLocation: UILabel!
@@ -39,6 +41,8 @@ class Details: UIViewController {
     }
     
     private func setData() {
+        let resource = DataImg(url: URL(string: details?.image ?? "")!, cacheKey: "")
+        propertyImg.kf.setImage(with: resource)
         propertyPrice.text = details?.attribute.price
         propertyTitle.text = details?.title
         propertyLocation.text = details?.location.address
@@ -50,5 +54,13 @@ class Details: UIViewController {
     
     @IBAction func backBtn(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func contactCall(_ sender: UIButton) {
+        print("contact call")
+    }
+    
+    @IBAction func shareBtn(_ sender: UIButton) {
+        Utilities.share(data: details!, vc: self)
     }
 }

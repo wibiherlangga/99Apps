@@ -68,6 +68,7 @@ class Home: UIViewController {
     @objc
     private func mapBtn(_ sender: UIButton) {
         let vc = Map()
+        vc.list = viewModel.propertyData?.data.list
         navigationController?.pushViewController(vc, animated: true)
     }
 }

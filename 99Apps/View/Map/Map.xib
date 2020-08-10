@@ -10,7 +10,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Map" customModule="_9Apps" customModuleProvider="target">
             <connections>
                 <outlet property="detailsView" destination="eKz-vO-1j7" id="YN9-hY-sbC"/>
+                <outlet property="imgProperty" destination="1Zn-Q5-YOs" id="AzW-hr-EVD"/>
+                <outlet property="locationProperty" destination="saD-4c-3nn" id="rha-jq-Wdb"/>
                 <outlet property="mapView" destination="Svf-vx-qF1" id="OOj-H1-Tj2"/>
+                <outlet property="priceProperty" destination="jUG-Qf-eDR" id="PmZ-Vy-Ub5"/>
+                <outlet property="titleProperty" destination="l32-7o-aok" id="QMp-DI-hG8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
